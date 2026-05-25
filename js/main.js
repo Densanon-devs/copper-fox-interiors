@@ -51,31 +51,62 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- Contact form (placeholder handling, no backend yet) ---
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    var statusEl = document.getElementById('form-status');
+    var setStatus = function (msg, kind) {
+      if (statusEl) { statusEl.textContent = msg; statusEl.className = 'form-status ' + (kind || ''); }
+    };
+
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      // --- Validate ---
       var valid = true;
       contactForm.querySelectorAll('[required]').forEach(function (field) {
-        if (!field.value.trim()) { field.style.borderColor = 'var(--color-error)'; valid = false; }
+        if (!field.value.trim()) { field.style.borderColor = 'var(--error)'; valid = false; }
         else { field.style.borderColor = ''; }
       });
       var emailField = contactForm.querySelector('input[type="email"]');
       if (emailField && emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
-        emailField.style.borderColor = 'var(--color-error)';
+        emailField.style.borderColor = 'var(--error)';
         valid = false;
       }
-      if (valid) {
-        var btn = contactForm.querySelector('button[type="submit"]');
-        var original = btn.textContent;
-        btn.textContent = 'Message Sent!';
-        btn.style.background = 'var(--color-success)';
-        btn.disabled = true;
-        setTimeout(function () {
-          btn.textContent = original;
-          btn.style.background = '';
-          btn.disabled = false;
-          contactForm.reset();
-        }, 3000);
+      if (!valid) { setStatus('Please complete the required fields.', 'error'); return; }
+
+      var btn = contactForm.querySelector('button[type="submit"]');
+      var original = btn.textContent;
+      var endpoint = contactForm.getAttribute('action') || '';
+
+      // Endpoint not configured yet (still the placeholder) — don't pretend to send.
+      if (endpoint.indexOf('REPLACE_WITH_FORM_ID') !== -1 || endpoint === '#' || endpoint === '') {
+        setStatus('The form isn’t connected to email yet. Please email copperfoxinteriors@yahoo.com directly.', 'error');
+        return;
       }
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      setStatus('', '');
+
+      fetch(endpoint, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          contactForm.reset();
+          btn.textContent = 'Message Sent';
+          setStatus('Thank you — your message has been sent. We’ll be in touch soon.', 'success');
+          setTimeout(function () { btn.textContent = original; btn.disabled = false; }, 4000);
+        } else {
+          return res.json().then(function (data) {
+            var m = data && data.errors && data.errors[0] && data.errors[0].message;
+            throw new Error(m || 'Submission failed');
+          });
+        }
+      }).catch(function () {
+        btn.textContent = original;
+        btn.disabled = false;
+        setStatus('Sorry, something went wrong. Please email copperfoxinteriors@yahoo.com directly.', 'error');
+      });
     });
   }
 

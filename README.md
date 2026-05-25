@@ -56,10 +56,26 @@ robots.txt, sitemap.xml
 - [ ] Replace remaining `[PLACEHOLDER]` / `[ ... ]` copy
 - [ ] Add fox logo emblem + favicon set (placeholder is a triangle glyph)
 - [ ] Add cinematic hero photo/video, collage images, project photos (real projects only)
-- [ ] Set real phone / email / Instagram / Pinterest links
-- [ ] Wire the contact form to a handler (Formspree, Netlify Forms, etc.)
-- [ ] Complete the LocalBusiness JSON-LD in `index.html`
+- [ ] Set real Instagram / Pinterest links (phone + email are wired)
+- [ ] **Connect the contact form** — see below
+- [ ] Add a real testimonial; confirm + clear the realtor partner logos
 - [ ] **Remove the `.placeholder-banner` div** from the top of each page
+
+## Connecting the contact form (Formspree)
+
+The contact form (`contact.html`) is fully wired to submit via `fetch` with validation,
+a honeypot, and success/error states — it just needs an endpoint. Submissions are
+delivered by **Formspree** to **copperfoxinteriors@yahoo.com**. One-time setup:
+
+1. Go to **formspree.io**, sign up (free tier = 50 submissions/mo) using
+   `copperfoxinteriors@yahoo.com`.
+2. Create a new form; copy the form ID (looks like `xyzabcde` in
+   `https://formspree.io/f/xyzabcde`).
+3. In `contact.html`, replace `REPLACE_WITH_FORM_ID` in the form `action` with that ID.
+4. Submit the form once and click the confirmation email Formspree sends to the inbox.
+
+Until the ID is set, the form shows a friendly "email us directly" message instead of
+pretending to send. No backend or server required.
 
 ## Local preview
 

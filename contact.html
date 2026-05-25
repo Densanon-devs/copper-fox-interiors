@@ -18,7 +18,7 @@
 </head>
 <body>
 
-  <div class="placeholder-banner">Placeholder site — the inquiry form is not yet wired to send</div>
+  <div class="placeholder-banner">Placeholder site — add the Formspree form ID to connect the inquiry form</div>
 
   <header class="site-header">
     <div class="header-inner">
@@ -55,12 +55,13 @@
       <!-- ===== Form ===== -->
       <div class="reveal">
         <h2 style="margin-bottom:0.75rem;">Send an inquiry</h2>
-        <p style="color:var(--warm-gray);">[PLACEHOLDER] The form is front-end only right now — it shows a
-          success state but does not send email yet. Wire to Formspree, Netlify Forms, or an email
-          handler before launch.</p>
+        <p style="color:var(--warm-gray);">Tell us a little about your project and we'll be in touch.
+          Inquiries go straight to <a href="mailto:copperfoxinteriors@yahoo.com">copperfoxinteriors@yahoo.com</a>.</p>
 
-        <!-- TODO: set a real action/method or form-service endpoint -->
-        <form id="contact-form" action="#" method="post" novalidate style="margin-top:2rem;">
+        <!-- SETUP: create a free form at formspree.io using copperfoxinteriors@yahoo.com,
+             then replace REPLACE_WITH_FORM_ID below with the form ID it gives you
+             (e.g. action="https://formspree.io/f/xyzabcde"). See README.md. -->
+        <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate style="margin-top:2rem;">
           <div class="grid grid-2" style="gap:1.25rem;">
             <div class="form-group">
               <label for="name">Name *</label>
@@ -90,7 +91,11 @@
             <label for="message">Tell us about your project *</label>
             <textarea id="message" name="message" required></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New inquiry — Copper Fox Interiors website">
+          <!-- Honeypot: bots fill this; real visitors never see it -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
           <button type="submit" class="btn btn-primary">Send Inquiry</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
 

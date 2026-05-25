@@ -4,43 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Copper Fox Interiors</title>
-  <meta name="description" content="Contact Copper Fox Interiors for home staging and interior layout services. [PLACEHOLDER]">
+  <meta name="description" content="Inquire about home staging and interior design with Copper Fox Interiors. [PLACEHOLDER]">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://copperfoxinteriors.co/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap&family=Jost:wght@300;400;500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <div class="placeholder-banner">PLACEHOLDER SITE — contact details and form action are placeholders.</div>
+  <div class="placeholder-banner">Placeholder site — contact details and form action are placeholders</div>
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">Copper&nbsp;<span>Fox</span>&nbsp;Interiors</span>
-      </a>
+      <a href="index.html" class="logo"><span class="logo-mark">Copper <span>Fox</span> Interiors</span></a>
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn btn-primary header-cta header-cta-desktop">Get a Quote</a>
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="contact.html" class="btn btn-primary header-cta header-cta-desktop">Inquire</a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Contact</span>
-      <h1>Let's talk about your space</h1>
-      <p>[PLACEHOLDER] Tell us about your project and we'll be in touch.</p>
+      <h1>Let's begin</h1>
+      <p>[PLACEHOLDER] Tell us about your space and we'll be in touch.</p>
     </div>
   </section>
 
@@ -48,15 +45,15 @@
     <div class="container contact-layout">
 
       <!-- ===== Form ===== -->
-      <div>
-        <h2>Send a message</h2>
-        <p style="color:var(--ink-soft);">[PLACEHOLDER] The form is front-end only right
-          now — it shows a success state but does not send email yet. Wire to Formspree,
-          Netlify Forms, or an email handler before launch.</p>
+      <div class="reveal">
+        <h2 style="margin-bottom:0.75rem;">Send an inquiry</h2>
+        <p style="color:var(--warm-gray);">[PLACEHOLDER] The form is front-end only right now — it shows a
+          success state but does not send email yet. Wire to Formspree, Netlify Forms, or an email
+          handler before launch.</p>
 
         <!-- TODO: set a real action/method or form-service endpoint -->
-        <form id="contact-form" action="#" method="post" novalidate>
-          <div class="grid grid-2" style="gap:1rem;">
+        <form id="contact-form" action="#" method="post" novalidate style="margin-top:2rem;">
+          <div class="grid grid-2" style="gap:1.25rem;">
             <div class="form-group">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required>
@@ -75,23 +72,21 @@
             <select id="service" name="service">
               <option value="">Select a service…</option>
               <option>Home Staging</option>
-              <option>Interior Layout &amp; Design</option>
-              <option>Occupied Home Refresh</option>
-              <option>Vacant Property Staging</option>
-              <option>Color &amp; Styling Consult</option>
-              <option>Other</option>
+              <option>Interior Design</option>
+              <option>Staging &amp; Design Consulting</option>
+              <option>Something else</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Tell us about your project *</label>
+            <label for="message">Tell us about your space *</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
         </form>
       </div>
 
       <!-- ===== Info card ===== -->
-      <div>
+      <div class="reveal">
         <div class="contact-info-card">
           <h3>Get in touch</h3>
           <div class="contact-info-item">
@@ -103,19 +98,19 @@
             <a href="mailto:hello@copperfoxinteriors.co">hello@copperfoxinteriors.co</a>
           </div>
           <div class="contact-info-item">
-            <div class="label">Service Area</div>
+            <div class="label">Studio / Service Area</div>
             <p style="margin:0;">[ City, ST and surrounding area ]</p>
           </div>
           <div class="contact-info-item">
             <div class="label">Hours</div>
-            <p style="margin:0;">[ Mon–Fri, by appointment ]</p>
+            <p style="margin:0;">[ By appointment ]</p>
           </div>
           <div class="contact-info-item" style="margin-bottom:0;">
             <div class="label">Follow</div>
-            <div class="footer-social" style="margin-top:0.6rem;">
+            <div class="footer-social" style="margin-top:0.7rem;">
               <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="Facebook">FB</a>
               <a href="#" aria-label="Pinterest">PIN</a>
+              <a href="#" aria-label="Facebook">FB</a>
             </div>
           </div>
         </div>
@@ -128,21 +123,21 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-about">
-          <h4>Copper <span style="color:var(--copper-light);">Fox</span> Interiors</h4>
-          <p>[PLACEHOLDER] Brief footer description of Copper Fox Interiors and the
-            service area.</p>
+          <h4>Copper <span>Fox</span> Interiors</h4>
+          <p>[PLACEHOLDER] A brief, refined description of Copper Fox Interiors and the service area.</p>
           <div class="footer-social">
             <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Facebook">FB</a>
             <a href="#" aria-label="Pinterest">PIN</a>
+            <a href="#" aria-label="Facebook">FB</a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>

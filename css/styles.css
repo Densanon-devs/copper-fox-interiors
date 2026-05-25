@@ -378,3 +378,120 @@ img { max-width: 100%; display: block; }
   .grid-3, .grid-2, .stats, .gallery-grid, .gallery-grid.cols-2 { grid-template-columns: 1fr; }
   .hero-scroll { display: none; }
 }
+
+/* ============================================
+   Mockup alignment — homepage components
+   (matches the approved design mockup)
+   ============================================ */
+
+/* --- Stacked logo with fox mark --- */
+.logo { gap: 0.7rem; }
+.logo-mark-img {
+  width: 34px; height: 38px; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--copper); font-size: 1.4rem;
+  /* TODO: replace with real fox emblem (site/images/logo-fox.svg) */
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--soft-black); letter-spacing: 0.14em; }
+.logo-sub { font-family: var(--font-body); font-size: 0.56rem; font-weight: 400; color: var(--copper); letter-spacing: 0.42em; text-transform: uppercase; margin-top: 0.2rem; }
+
+/* --- Hero: left-aligned, cinematic --- */
+.hero { text-align: left; justify-content: flex-start;
+  background:
+    linear-gradient(90deg, rgba(33,29,24,0.74) 0%, rgba(33,29,24,0.30) 46%, rgba(33,29,24,0.04) 72%),
+    linear-gradient(135deg, #6f6151 0%, #3b352d 100%);
+}
+.hero .container { max-width: var(--maxw); }
+.hero-content { max-width: 560px; }
+.hero-content h1 { margin-bottom: 1.5rem; }
+.hero-rule { width: 54px; height: 1px; background: var(--copper); margin: 1.75rem 0 1.25rem; }
+.hero-sub { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.72rem; color: rgba(255,255,255,0.82); margin-bottom: 2.5rem; }
+
+/* --- Statement: text + image collage --- */
+.statement { display: grid; grid-template-columns: 1fr 1.15fr; gap: 5rem; align-items: center; }
+.statement .fox-watermark { color: var(--copper); font-size: 2rem; opacity: 0.85; margin-bottom: 2rem; }
+.collage { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1rem; }
+.collage .tile {
+  aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden;
+  background: linear-gradient(135deg, #e6ddd0, #d3c6b4);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--warm-gray); font-style: italic; font-family: var(--font-display); font-size: 0.8rem; text-align: center; padding: 0.5rem;
+}
+.collage .tile.tall { grid-row: span 2; aspect-ratio: auto; }
+.collage .tile.wide { grid-column: span 2; aspect-ratio: 3 / 2; }
+.collage .tile img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- Numbered services row (4-up) --- */
+.services-row { display: grid; grid-template-columns: repeat(4, 1fr); }
+.service-cell { text-align: center; padding: 2.5rem 1.75rem; border-left: 1px solid var(--line-soft); }
+.service-cell:first-child { border-left: none; }
+.service-cell .thumb {
+  aspect-ratio: 4 / 3; margin-bottom: 1.5rem; border-radius: var(--radius); overflow: hidden;
+  background: linear-gradient(135deg, #e6ddd0, #d3c6b4);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--warm-gray); font-style: italic; font-family: var(--font-display); font-size: 0.8rem;
+}
+.service-cell .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.service-cell .num { font-family: var(--font-display); color: var(--copper); font-size: 1.1rem; display: block; margin-bottom: 0.6rem; }
+.service-cell h3 { font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-display); margin-bottom: 1rem; }
+.service-cell .learn { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--warm-gray); }
+.service-cell .learn:hover { color: var(--copper); }
+
+/* --- Featured: dark split panel + wide image --- */
+.featured { display: grid; grid-template-columns: 1fr 1.4fr; min-height: 460px; }
+.featured .panel { background: var(--soft-black); color: rgba(245,241,234,0.72); padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; }
+.featured .panel .eyebrow { color: var(--copper); }
+.featured .panel h2 { color: var(--ivory); margin-bottom: 1.5rem; }
+.featured .panel .btn { align-self: flex-start; margin-top: 1.75rem; }
+.featured .media { background: linear-gradient(135deg, #e6ddd0, #b9aa97); display: flex; align-items: center; justify-content: center; color: var(--warm-gray); font-style: italic; font-family: var(--font-display); }
+.featured .media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- Partners / realtor logo strip --- */
+.partners { text-align: center; }
+.partners .partners-head { color: var(--copper); text-transform: uppercase; letter-spacing: 0.26em; font-size: 0.74rem; line-height: 2; margin-bottom: 2.5rem; }
+.partners-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 3.5rem; }
+.partners-logos .logo-item { font-family: var(--font-display); font-size: 1.25rem; letter-spacing: 0.06em; color: var(--warm-gray); opacity: 0.85; }
+
+/* --- Testimonial split (quote + image) --- */
+.testimonial-split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+.testimonial-split .quote-mark { font-family: var(--font-display); font-size: 3rem; color: var(--copper); line-height: 0.5; }
+.testimonial-split blockquote { font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.5; color: var(--soft-black); margin: 1.25rem 0 1.5rem; }
+.testimonial-split .cite { text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.7rem; color: var(--warm-gray); }
+.testimonial-split .media { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: linear-gradient(135deg, #e6ddd0, #d3c6b4); display: flex; align-items: center; justify-content: center; color: var(--warm-gray); font-style: italic; font-family: var(--font-display); }
+.testimonial-split .media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- Footer CTA banner --- */
+.footer-cta {
+  position: relative; text-align: center; padding: 7rem 2rem; color: #fff;
+  background:
+    linear-gradient(rgba(33,29,24,0.5), rgba(33,29,24,0.55)),
+    linear-gradient(135deg, #8a8073, #4a443b);
+  background-size: cover; background-position: center;
+}
+.footer-cta-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.footer-cta h2 { color: #fff; font-weight: 300; font-size: clamp(2rem, 4vw, 3rem); text-align: left; }
+.footer-cta h2 em { font-style: italic; }
+
+/* --- Footer 4-column --- */
+.footer-grid.cols-4 { grid-template-columns: 2fr 1fr 1fr 1fr; }
+
+/* --- Responsive for mockup components --- */
+@media (max-width: 960px) {
+  .statement, .featured, .testimonial-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .services-row { grid-template-columns: repeat(2, 1fr); }
+  .service-cell { border-left: none; border-top: 1px solid var(--line-soft); }
+  .service-cell:nth-child(-n+2) { border-top: none; }
+  .featured .panel { padding: 3.5rem 2.5rem; }
+  .footer-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .collage { grid-template-columns: repeat(2, 1fr); }
+  .services-row { grid-template-columns: 1fr; }
+  .service-cell, .service-cell:nth-child(-n+2) { border-top: 1px solid var(--line-soft); }
+  .service-cell:first-child { border-top: none; }
+  .partners-logos { gap: 2rem; }
+  .footer-cta-inner { flex-direction: column; text-align: center; }
+  .footer-cta h2 { text-align: center; }
+  .footer-grid.cols-4 { grid-template-columns: 1fr; }
+}

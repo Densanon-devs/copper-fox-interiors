@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Copper Fox Interiors — Curated Interiors, Elevated Living</title>
-  <meta name="description" content="Copper Fox Interiors is a home staging and interior design studio creating curated, elevated spaces. [PLACEHOLDER — replace with real description and service area.]">
+  <meta name="description" content="Copper Fox Interiors is a full-service interior design and property staging studio serving the Pacific Northwest — Seattle, Bellevue, Portland, and surrounding areas.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://copperfoxinteriors.co/">
   <meta property="og:title" content="Copper Fox Interiors — Curated Interiors, Elevated Living">
-  <meta property="og:description" content="A home staging and interior design studio creating curated, elevated spaces. [PLACEHOLDER]">
+  <meta property="og:description" content="Full-service interior design & property staging in the Pacific Northwest.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://copperfoxinteriors.co/">
 
@@ -17,16 +17,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- TODO: fill in real LocalBusiness schema once details arrive -->
+  <!-- TODO: confirm phone/address and complete this LocalBusiness schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "InteriorDesignBusiness",
     "name": "Copper Fox Interiors",
     "url": "https://copperfoxinteriors.co",
-    "description": "Home staging and interior design studio. [PLACEHOLDER]",
+    "description": "Full-service interior design and property staging studio serving the Pacific Northwest.",
     "telephone": "+1-000-000-0000",
-    "address": { "@type": "PostalAddress", "addressLocality": "[CITY]", "addressRegion": "[ST]", "addressCountry": "US" },
+    "areaServed": ["Seattle, WA", "Bellevue, WA", "Portland, OR"],
+    "address": { "@type": "PostalAddress", "addressRegion": "WA", "addressCountry": "US" },
     "priceRange": "$$$"
   }
   </script>
@@ -38,157 +39,182 @@
   <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">Copper <span>Fox</span> Interiors</span></a>
+      <a href="index.html" class="logo">
+        <span class="logo-mark-img" aria-hidden="true">&#9651;</span>
+        <span class="logo-text">
+          <span class="logo-name">Copper Fox</span>
+          <span class="logo-sub">Interiors</span>
+        </span>
+      </a>
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="for-realtors.html">For Realtors</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn btn-primary header-cta header-cta-desktop">Inquire</a>
+      <a href="contact.html" class="btn btn-outline header-cta header-cta-desktop">Inquire</a>
       <button class="menu-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- ===== Hero: large, cinematic, minimal ===== -->
+  <!-- ===== Hero: left-aligned, cinematic ===== -->
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Copper Fox Interiors</span>
-      <h1>Curated Interiors.<br><em>Elevated Living.</em></h1>
-      <p>[PLACEHOLDER] A short, refined statement of what the studio does and the feeling it creates.</p>
-      <div class="hero-actions">
-        <a href="portfolio.html" class="btn btn-ghost">View Portfolio</a>
-        <a href="contact.html" class="btn btn-light">Inquire</a>
+      <div class="hero-content">
+        <h1>Curated Interiors.<br><em>Elevated Living.</em></h1>
+        <div class="hero-rule"></div>
+        <p class="hero-sub">Full-Service Design &amp; Property Staging in the PNW</p>
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn btn-ghost">Explore Our Work</a>
+          <a href="contact.html" class="btn btn-light">Inquire</a>
+        </div>
       </div>
     </div>
     <span class="hero-scroll">Scroll</span>
   </section>
 
-  <!-- ===== Editorial statement ===== -->
+  <!-- ===== Statement: text + image collage ===== -->
   <section class="section">
-    <div class="container-narrow reveal" style="text-align:center;">
-      <span class="eyebrow">The Studio</span>
-      <h2 style="margin-bottom:1.5rem;">Spaces that feel considered, calm, and quietly luxurious</h2>
-      <p style="color:var(--warm-gray); font-size:1.1rem;">[PLACEHOLDER] Two or three sentences of warm, editorial introduction —
-        the studio's philosophy of curated, organic luxury. Keep it minimal and let it breathe.</p>
-    </div>
-  </section>
-
-  <!-- ===== Portfolio preview ===== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Selected Work</span>
-        <h2>Portfolio</h2>
-        <p>[PLACEHOLDER] A line introducing the studio's recent projects.</p>
-      </div>
-      <div class="gallery-grid cols-2 reveal">
-        <div class="gallery-item"><span>[ Featured project ]</span><div class="gallery-caption">[ Project name — location ]</div></div>
-        <div class="gallery-item"><span>[ Featured project ]</span><div class="gallery-caption">[ Project name — location ]</div></div>
-      </div>
-      <div style="text-align:center; margin-top:3rem;" class="reveal">
-        <a href="portfolio.html" class="btn btn-outline">View Full Portfolio</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About teaser ===== -->
-  <section class="section">
-    <div class="container split reveal">
-      <div class="media"><span>[ Founder / studio portrait ]</span></div>
+    <div class="container statement reveal">
       <div>
-        <span class="eyebrow">About</span>
-        <h2>An eye for the curated and the timeless</h2>
-        <p>[PLACEHOLDER] Two or three sentences about the founder and the studio's approach —
-          architectural, grounded, emotionally warm.</p>
-        <p style="margin-top:1.5rem;"><a href="about.html" class="btn btn-outline">Our Story</a></p>
+        <div class="fox-watermark" aria-hidden="true">&#9651;</div>
+        <span class="eyebrow">The Studio</span>
+        <h2 style="margin-bottom:1.5rem;">Thoughtful Design.<br>Lasting Impact.</h2>
+        <p style="color:var(--warm-gray); font-size:1.05rem;">Copper Fox Interiors is a full-service interior design
+          studio creating warm, elevated spaces that feel effortless and timeless.</p>
+        <p style="margin-top:1.75rem;"><a href="about.html" class="eyebrow" style="margin:0;">About Jaclyn &rarr;</a></p>
+      </div>
+      <div class="collage">
+        <div class="tile tall"><span>[ Detail ]</span></div>
+        <div class="tile"><span>[ Materials ]</span></div>
+        <div class="tile"><span>[ Accent ]</span></div>
+        <div class="tile wide"><span>[ Styled vignette ]</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Services preview ===== -->
+  <!-- ===== Services row (4-up, numbered) ===== -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">What We Offer</span>
         <h2>Services</h2>
-        <p>[PLACEHOLDER] A line framing the studio's services.</p>
       </div>
-      <div class="grid grid-3 reveal">
-        <div class="card">
-          <span class="card-num">01</span>
-          <h3>Home Staging</h3>
-          <p>[PLACEHOLDER] Editorial staging that helps a property feel curated, spacious, and ready to sell.</p>
+      <div class="services-row reveal">
+        <div class="service-cell">
+          <div class="thumb"><span>[ Image ]</span></div>
+          <span class="num">01</span>
+          <h3>Full-Service<br>Interior Design</h3>
+          <a href="services.html" class="learn">Learn More</a>
         </div>
-        <div class="card">
-          <span class="card-num">02</span>
-          <h3>Interior Design</h3>
-          <p>[PLACEHOLDER] Considered, layered interiors for living — organic materials and warm minimalism.</p>
+        <div class="service-cell">
+          <div class="thumb"><span>[ Image ]</span></div>
+          <span class="num">02</span>
+          <h3>New Construction<br>&amp; Renovation</h3>
+          <a href="services.html" class="learn">Learn More</a>
         </div>
-        <div class="card">
-          <span class="card-num">03</span>
-          <h3>Staging &amp; Design Consulting</h3>
-          <p>[PLACEHOLDER] Guidance on layout, palette, and styling to elevate a space with intention.</p>
+        <div class="service-cell">
+          <div class="thumb"><span>[ Image ]</span></div>
+          <span class="num">03</span>
+          <h3>Property Staging<br>&amp; Investor Design</h3>
+          <a href="services.html" class="learn">Learn More</a>
         </div>
-      </div>
-      <div style="text-align:center; margin-top:3rem;" class="reveal">
-        <a href="services.html" class="btn btn-outline">Explore Services</a>
+        <div class="service-cell">
+          <div class="thumb"><span>[ Image ]</span></div>
+          <span class="num">04</span>
+          <h3>For Realtors<br>&amp; Developers</h3>
+          <a href="for-realtors.html" class="learn">Learn More</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Testimonial (subtle) ===== -->
-  <section class="section">
-    <div class="container testimonial reveal">
-      <div class="testimonial-rule"></div>
-      <span class="eyebrow">Kind Words</span>
-      <blockquote>[PLACEHOLDER] A single, beautifully set client quote — short, warm, and genuine.</blockquote>
-      <div class="cite">— [ Client name, City ]</div>
+  <!-- ===== Featured: Spaces with Intention ===== -->
+  <section class="featured reveal">
+    <div class="panel">
+      <span class="eyebrow">Featured Work</span>
+      <h2>Spaces with<br>Intention.</h2>
+      <p>Each project is a reflection of our belief that good design elevates everyday life.</p>
+      <a href="portfolio.html" class="btn btn-ghost">View Portfolio</a>
+    </div>
+    <div class="media"><span>[ Wide cinematic project image ]</span></div>
+  </section>
+
+  <!-- ===== Partners (realtors) ===== -->
+  <section class="section partners">
+    <div class="container reveal">
+      <!-- NOTE: confirm these partnerships are real and clear logo usage before launch -->
+      <p class="partners-head">Proudly partnering with top realtors<br>across the Pacific Northwest</p>
+      <div class="partners-logos">
+        <span class="logo-item">[ Brokerage ]</span>
+        <span class="logo-item">[ Brokerage ]</span>
+        <span class="logo-item">[ Brokerage ]</span>
+        <span class="logo-item">[ Brokerage ]</span>
+        <span class="logo-item">[ Brokerage ]</span>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Contact CTA ===== -->
+  <!-- ===== Testimonial ===== -->
   <section class="section section-alt">
-    <div class="container section-head reveal" style="margin-bottom:0;">
-      <span class="eyebrow">Let's Begin</span>
-      <h2>Begin your project</h2>
-      <p>[PLACEHOLDER] A warm closing invitation to get in touch.</p>
-      <a href="contact.html" class="btn btn-primary">Inquire</a>
+    <div class="container testimonial-split reveal">
+      <div>
+        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+        <!-- PLACEHOLDER testimonial — replace with a real, attributed client review before launch -->
+        <blockquote>[PLACEHOLDER] A real client quote goes here — short, warm, and genuine. Replace this sample before launch.</blockquote>
+        <div class="cite">— [ Client name, role ]</div>
+      </div>
+      <div class="media"><span>[ Styled interior image ]</span></div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
+  <section class="footer-cta">
+    <div class="footer-cta-inner">
+      <h2>Let's create something <em>beautiful</em> together.</h2>
+      <a href="contact.html" class="btn btn-ghost">Inquire Today</a>
+    </div>
+  </section>
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid cols-4">
         <div class="footer-col footer-about">
           <h4>Copper <span>Fox</span> Interiors</h4>
-          <p>[PLACEHOLDER] A brief, refined description of Copper Fox Interiors and the service area.</p>
+          <p>Full-service interior design &amp; property staging, creating warm, elevated spaces across the Pacific Northwest.</p>
           <div class="footer-social">
             <a href="#" aria-label="Instagram">IG</a>
             <a href="#" aria-label="Pinterest">PIN</a>
-            <a href="#" aria-label="Facebook">FB</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Navigate</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="for-realtors.html">For Realtors</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Get in Touch</h4>
+          <h4>Connect</h4>
           <ul>
-            <li><a href="tel:+10000000000">(000) 000-0000</a></li>
-            <li><a href="mailto:hello@copperfoxinteriors.co">hello@copperfoxinteriors.co</a></li>
-            <li>[ City, ST ]</li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="mailto:hello@copperfoxinteriors.co">Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serving</h4>
+          <ul>
+            <li>Seattle</li>
+            <li>Bellevue</li>
+            <li>Portland</li>
+            <li>Surrounding Areas</li>
           </ul>
         </div>
       </div>

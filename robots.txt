@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://copperfoxinteriors.com/sitemap.xml
+Sitemap: https://copperfoxinteriors.co/sitemap.xml

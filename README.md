@@ -21,10 +21,10 @@ or `[ ... ]`. Real content to be filled in as the client provides it.
 ## Structure
 
 ```
-css/styles.css     palette + all styles (copper / charcoal / cream)
+css/styles.css     palette + all styles (dark · moody · luxury · timeless)
 js/main.js         mobile nav, gallery filter, form handling, smooth scroll
 site/images/       drop logo, hero, gallery photos here (see README in folder)
-CNAME              copperfoxinteriors.com (placeholder — set to real domain)
+CNAME              copperfoxinteriors.co (placeholder — set to real domain)
 robots.txt, sitemap.xml
 ```
 

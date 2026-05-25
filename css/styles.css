@@ -398,12 +398,15 @@ img { max-width: 100%; display: block; }
 .logo-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--soft-black); letter-spacing: 0.14em; }
 .logo-sub { font-family: var(--font-body); font-size: 0.56rem; font-weight: 400; color: var(--copper); letter-spacing: 0.42em; text-transform: uppercase; margin-top: 0.2rem; }
 
-/* --- Hero: left-aligned, cinematic --- */
+/* --- Hero: left-aligned, cinematic ---
+   .hero-bg (photo) sits at z0, .hero-scrim-layer at z1, content at z2.
+   The warm gradient below is the fallback shown if the photo is missing. */
 .hero { text-align: left; justify-content: flex-start;
-  background:
-    linear-gradient(90deg, rgba(36,24,12,0.78) 0%, rgba(36,24,12,0.34) 46%, rgba(36,24,12,0.05) 72%),
-    linear-gradient(135deg, #9a7a58 0%, #4a3829 100%);
+  background: linear-gradient(135deg, #9a7a58 0%, #4a3829 100%);
 }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-scrim-layer { position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(36,24,12,0.78) 0%, rgba(36,24,12,0.34) 46%, rgba(36,24,12,0.05) 72%); }
 .hero .container { max-width: var(--maxw); }
 .hero-content { max-width: 560px; }
 .hero-content h1 { margin-bottom: 1.5rem; }
@@ -497,3 +500,22 @@ img { max-width: 100%; display: block; }
   .footer-cta h2 { text-align: center; }
   .footer-grid.cols-4 { grid-template-columns: 1fr; }
 }
+
+/* ============================================
+   Image drop-in support
+   Put <img class="img-cover" ... data-fallback> inside a placeholder
+   container. When the real file exists it covers the placeholder; if the
+   file is missing, js/main.js hides it and the placeholder shows through.
+   ============================================ */
+.split .media, .featured .media, .testimonial-split .media,
+.collage .tile, .service-cell .thumb, .gallery-item, .media-placeholder { position: relative; }
+.img-cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.gallery-caption { z-index: 2; }
+
+/* Logo emblem image (falls back to the glyph if logo-fox.svg is missing) */
+.logo-mark-img { position: relative; }
+.logo-fox { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+
+/* Footer CTA real photo layer */
+.footer-cta .footer-cta-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.footer-cta-inner { position: relative; z-index: 2; }

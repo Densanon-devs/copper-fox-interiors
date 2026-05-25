@@ -7,6 +7,10 @@
   <meta name="description" content="Selected interior design and property staging projects by Copper Fox Interiors across the Pacific Northwest. [PLACEHOLDER]">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://copperfoxinteriors.co/portfolio.html">
+  <link rel="icon" href="site/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="site/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="site/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="site/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,7 +23,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-mark-img" aria-hidden="true">&#9651;</span>
+        <span class="logo-mark-img" aria-hidden="true"><img class="logo-fox" src="site/images/logo-fox.svg" alt="" data-fallback>&#9651;</span>
         <span class="logo-text"><span class="logo-name">Copper Fox</span><span class="logo-sub">Interiors</span></span>
       </a>
       <nav class="main-nav">
@@ -57,26 +61,27 @@
       </div>
 
       <div class="gallery-grid reveal">
-        <div class="gallery-item" data-category="design"><span>[ Project 1 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
-        <div class="gallery-item" data-category="staging"><span>[ Project 2 ]</span><div class="gallery-caption">[ Project name — staging ]</div></div>
-        <div class="gallery-item" data-category="construction"><span>[ Project 3 ]</span><div class="gallery-caption">[ Project name — construction ]</div></div>
-        <div class="gallery-item" data-category="design"><span>[ Project 4 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
-        <div class="gallery-item" data-category="staging"><span>[ Project 5 ]</span><div class="gallery-caption">[ Project name — staging ]</div></div>
-        <div class="gallery-item" data-category="construction"><span>[ Project 6 ]</span><div class="gallery-caption">[ Project name — construction ]</div></div>
-        <div class="gallery-item" data-category="design"><span>[ Project 7 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
-        <div class="gallery-item" data-category="staging"><span>[ Project 8 ]</span><div class="gallery-caption">[ Project name — staging ]</div></div>
-        <div class="gallery-item" data-category="design"><span>[ Project 9 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
+        <div class="gallery-item" data-category="design"><img class="img-cover" src="site/images/project-01.jpg" alt="Interior design project" data-fallback><span>[ Project 1 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
+        <div class="gallery-item" data-category="staging"><img class="img-cover" src="site/images/project-02.jpg" alt="Staging project" data-fallback><span>[ Project 2 ]</span><div class="gallery-caption">[ Project name — staging ]</div></div>
+        <div class="gallery-item" data-category="construction"><img class="img-cover" src="site/images/project-03.jpg" alt="New construction project" data-fallback><span>[ Project 3 ]</span><div class="gallery-caption">[ Project name — construction ]</div></div>
+        <div class="gallery-item" data-category="design"><img class="img-cover" src="site/images/project-04.jpg" alt="Interior design project" data-fallback><span>[ Project 4 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
+        <div class="gallery-item" data-category="staging"><img class="img-cover" src="site/images/project-05.jpg" alt="Staging project" data-fallback><span>[ Project 5 ]</span><div class="gallery-caption">[ Project name — staging ]</div></div>
+        <div class="gallery-item" data-category="construction"><img class="img-cover" src="site/images/project-06.jpg" alt="New construction project" data-fallback><span>[ Project 6 ]</span><div class="gallery-caption">[ Project name — construction ]</div></div>
+        <div class="gallery-item" data-category="design"><img class="img-cover" src="site/images/project-07.jpg" alt="Interior design project" data-fallback><span>[ Project 7 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
+        <div class="gallery-item" data-category="staging"><img class="img-cover" src="site/images/project-08.jpg" alt="Staging project" data-fallback><span>[ Project 8 ]</span><div class="gallery-caption">[ Project name — staging ]</div></div>
+        <div class="gallery-item" data-category="design"><img class="img-cover" src="site/images/project-09.jpg" alt="Interior design project" data-fallback><span>[ Project 9 ]</span><div class="gallery-caption">[ Project name — design ]</div></div>
       </div>
 
       <!--
-        To add a real image, replace the <span> with:
-        <img src="site/images/project-name.jpg" alt="Descriptive alt text">
+        Real images auto-appear when dropped at site/images/project-0N.jpg.
+        Until then the placeholder tile shows. Update alt text + caption to match each project.
       -->
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <section class="footer-cta">
+    <img class="footer-cta-bg" src="site/images/cta-landscape.jpg" alt="" data-fallback>
     <div class="footer-cta-inner">
       <h2>Let's create something <em>beautiful</em> together.</h2>
       <a href="contact.html" class="btn btn-ghost">Inquire Today</a>

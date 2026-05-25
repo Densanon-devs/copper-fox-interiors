@@ -112,4 +112,14 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
+  // --- Image drop-in fallback ---
+  // Hide any <img data-fallback> whose file is missing so the placeholder
+  // styling shows through. Once a real file is dropped at the src path,
+  // it loads and covers the placeholder automatically — no code change needed.
+  document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+    var hide = function () { img.style.display = 'none'; };
+    if (img.complete && img.naturalWidth === 0) hide();
+    img.addEventListener('error', hide);
+  });
+
 });

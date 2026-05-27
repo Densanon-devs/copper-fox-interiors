@@ -427,8 +427,9 @@ img { max-width: 100%; display: block; }
 .collage .tile.wide { grid-column: span 2; aspect-ratio: 3 / 2; }
 .collage .tile img { width: 100%; height: 100%; object-fit: cover; }
 
-/* --- Numbered services row (4-up) --- */
-.services-row { display: grid; grid-template-columns: repeat(4, 1fr); }
+/* --- Numbered services row (3-up) --- */
+.services-row { display: grid; grid-template-columns: repeat(3, 1fr); }
+.services-note { text-align: center; max-width: 640px; margin: 3rem auto 0; color: var(--warm-gray); font-size: 0.98rem; }
 .service-cell { text-align: center; padding: 2.5rem 1.75rem; border-left: 1px solid var(--line-soft); }
 .service-cell:first-child { border-left: none; }
 .service-cell .thumb {
